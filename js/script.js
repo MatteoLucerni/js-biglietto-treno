@@ -29,7 +29,7 @@ console.log('price: ' + price);
 
 // Calcolo lo sconto in base all età
 
-let discount = 0;
+let discount = 100;
 
 if(age < 18){
     discount = 20;
