@@ -1,0 +1,12 @@
+
+#target, #error{
+    font-size: 1.2rem;
+}
+
+#target{
+    background-color: rgb(81, 143, 81);
+}
+
+#error{
+    background-color: rgb(253, 73, 73);
+}

@@ -12,6 +12,7 @@ L'output del prezzo finale va messo fuori con massimo due decimali, per indicare
 */
 
 const target = document.getElementById('target');
+const errorTarget = document.getElementById('error');
 
 const distance = parseInt(prompt('Inserisci il nuomero di km che vuoi percorrere. Per Esempio: 54', '54'));
 console.log('distance: ' + distance);
@@ -34,13 +35,16 @@ if((typeof distance, typeof age) === 'number' && distance >= 0 && age > 0){
     // Calcolo lo sconto in base all età
 
     let discount = 0;
+    let discountMessage = 'Nessuno sconto disponibile D:'
 
     if(age < 18){
         discount = 20;
-        console.log('Sei minorenne, lo sconto è del',discount,'%.');
+        console.log('Sconto: ',discount,'%.');
+        discountMessage = `Sei minorenne, lo sconto è del' ${discount}%.`;
     } else if(age >= 65){
         discount = 40;
-        console.log('Sei over 65, lo sconto è del',discount,'%.');
+        console.log('Sconto: ',discount,'%.');
+        discountMessage = `Sei over 65, lo sconto è del' ${discount}%.`;
     }
 
     // Calcolo il prezzo finale scontato
@@ -50,8 +54,9 @@ if((typeof distance, typeof age) === 'number' && distance >= 0 && age > 0){
 
     // Inserisco il prezzo scontato in pagina
 
-    target.innerText = `Il tuo biglietto costa: ${discountedPrice}€`;
+    target.innerText = `Il tuo biglietto costa: ${discountedPrice}€. ${discountMessage}`;
 } else{
-    console.log('Error: Please enter only valid numbers!');
+    console.log('Errore: Per favore inserisci solo valori numerici validi');
+    errorTarget.innerText = 'Errore: Per favore inserisci solo valori numerici validi';
 }
 
