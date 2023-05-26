@@ -11,3 +11,39 @@ L'output del prezzo finale va messo fuori con massimo due decimali, per indicare
 
 */
 
+const target = document.getElementById('target');
+
+const distance = parseInt(prompt('Inserisci il nuomero di km che vuoi percorrere. Per Esempio: 54', '54'));
+console.log('distance: ' + distance);
+
+const age = parseInt(prompt('Inserisci la tua età per calcolare lo sconto', '17'));
+console.log('age: ' + age);
+
+
+// TODO validazione
+
+// Calcolo prezzo biglietto
+
+const price = (distance * 0.21);
+console.log('price: ' + price);
+
+// Calcolo lo sconto in base all età
+
+let discount = 0;
+
+if(age < 18){
+    discount = 20;
+    console.log('Sei minorenne, lo sconto è del',discount,'%.');
+} else if(age >= 65){
+    discount = 40;
+    console.log('Sei over 65, lo sconto è del',discount,'%.');
+}
+
+// Calcolo il prezzo finale scontato
+
+discountedPrice = ((discount / 100) * price).toFixed(2);
+console.log('Prezzo scontato: ' + discountedPrice);
+
+// Inserisco il prezzo scontato in pagina
+
+target.innerText = `Il tuo biglietto costa: ${discountedPrice}€`;
