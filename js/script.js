@@ -41,7 +41,7 @@ if(age < 18){
 
 // Calcolo il prezzo finale scontato
 
-discountedPrice = ((discount / 100) * price).toFixed(2);
+discountedPrice = (price - ((discount / 100) * price)).toFixed(2);
 console.log('Prezzo scontato: ' + discountedPrice);
 
 // Inserisco il prezzo scontato in pagina
