@@ -56,6 +56,11 @@ if((typeof distance, typeof age) === 'number' && distance >= 0 && age > 0){
     // Inserisco il prezzo scontato in pagina
 
     target.innerText = `Il tuo biglietto costa: ${discountedPrice}€. ${discountMessage}`;
+
+    if(discount != 0){
+        target.innerText = `Il tuo biglietto costa: ${discountedPrice}€. ${discountMessage} Prezzo non scontato: ${price}€`;
+    }
+
 } else{
     console.log('Errore: Per favore inserisci solo valori numerici validi');
     errorTarget.innerText = 'Errore: Per favore inserisci solo valori numerici validi';
