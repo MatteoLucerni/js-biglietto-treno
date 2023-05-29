@@ -40,13 +40,13 @@ if((typeof distance, typeof age) === 'number' && distance >= 0 && age > 0){
 
     if(age < 18){
         discount = 20;
-        console.log('Sconto: ',discount,'%.');
         discountMessage = `Sei minorenne, lo sconto è del' ${discount}%.`;
     } else if(age >= 65){
         discount = 40;
-        console.log('Sconto: ',discount,'%.');
         discountMessage = `Sei over 65, lo sconto è del' ${discount}%.`;
     }
+
+    console.log('Sconto: ',discount,'%.');
 
     // Calcolo il prezzo finale scontato
 
