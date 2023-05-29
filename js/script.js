@@ -13,6 +13,7 @@ L'output del prezzo finale va messo fuori con massimo due decimali, per indicare
 
 const target = document.getElementById('target');
 const errorTarget = document.getElementById('error');
+const pricePerKm = 0.21;
 
 const distance = parseInt(prompt('Inserisci il nuomero di km che vuoi percorrere. Per Esempio: 54', '54'));
 console.log('distance: ' + distance);
@@ -29,7 +30,7 @@ if((typeof distance, typeof age) === 'number' && distance >= 0 && age > 0){
 
     // Calcolo prezzo biglietto
 
-    const price = (distance * 0.21);
+    const price = (distance * pricePerKm);
     console.log('price: ' + price);
 
     // Calcolo lo sconto in base all età
